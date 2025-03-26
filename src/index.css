@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root {
+  --pink: #fbb1bd;
+  --cream: #fff5e1;
+  --accent: #ff6f91;
+  --text: #333;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+

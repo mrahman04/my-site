@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+:root {
+  --pink: #fbb1bd;
+  --cream: #fff5e1;
+  --accent: #ff6f91;
+  --text: #333;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: var(--accent);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background: var(--pink);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links a {
+  margin-left: 2rem;
+  color: white;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--pink);
+  color: white;
+  border-radius: 20px;
+  margin: 2rem;
+}
+
+.hero button {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: white;
+  color: var(--accent);
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.steps {
+  text-align: center;
+  padding: 2rem;
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.step {
+  background: white;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  font-size: 1.2rem;
+}
+
+.page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home-box {
+  background-color: var(--pink);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 200px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.home-box:hover {
+  transform: scale(1.05);
+}
+
+.add-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup {
+  background: var(--cream);
+  padding: 1.5rem;
+  border: 3px solid var(--pink);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(255, 105, 135, 0.2);
+  max-width: 320px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.popup input {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.popup button {
+  background: var(--pink);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.popup button:hover {
+  background: var(--accent);
+}
+.modal {
+  background: var(--cream);
+  padding: 2rem;
+  border: 2px solid var(--pink);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+.modal input,
+.modal select {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--pink);
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-group button {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: none;
+  background: var(--pink);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-group .cancel {
+  background: #ddd;
+  color: var(--text);
 }
